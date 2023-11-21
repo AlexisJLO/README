@@ -38,7 +38,32 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  switch (license) {
+    case "MIT":
+      return `This project is licensed under the ${renderLicenseLink(
+        license
+      )}. The MIT License is a permissive open-source license that allows you to use, modify, and distribute the code in your projects. It only requires that you include the original copyright notice in your project.`;
+    case "Apache-2.0":
+      return `This project is licensed under the ${renderLicenseLink(
+        license
+      )}.  The Apache License 2.0 is an open-source license that provides more specific terms and conditions for using and distributing software. It includes provisions related to patents and contributions.`;
+    case "GPL-3.0":
+      return `This project is licensed under the ${renderLicenseLink(
+        license
+      )}. The GNU GPL v3.0 is a strong copyleft license that requires any derivative works or modifications to also be released under the same license. It promotes open-source software and ensures that modifications are also open source.`;
+    case "BSD-2-Clause":
+      return `This project is licensed under the ${renderLicenseLink(
+        license
+      )}. The BSD 2-Clause License is a permissive open-source license that allows you to use, modify, and distribute the code in your projects. It only requires that you include the original copyright notice in your project.`;
+    case "BSD-3-Clause":
+      return `This project is licensed under the ${renderLicenseLink(
+        license
+      )}. The BSD 3-Clause License is a permissive open-source license that allows you to use, modify, and distribute the code in your projects. It requires you to include the original copyright notice, disclaimer, and attribution notices in your project.`;
+    default:
+      return "";
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
