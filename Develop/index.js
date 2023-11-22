@@ -11,25 +11,18 @@ const questions = [
   },
   {
     type: "input",
-    name: "Description",
-    message:
-      "Provide a short description explaining the what, why, and how of your project.",
+    name: "description",
+    message: "Provide a short description explaining your project.",
   },
   {
     type: "input",
-    name: "Installation",
+    name: "installation",
     message:
       "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.",
   },
   {
-    type: "input",
-    name: "Usage",
-    message:
-      "Provide instructions and examples for use. Include screenshots as needed.",
-  },
-  {
     type: "list",
-    name: "License",
+    name: "license",
     message: "Which license do you want to use?",
     choices: [
       {
@@ -56,8 +49,18 @@ const questions = [
   },
   {
     type: "input",
-    name: "Features",
+    name: "features",
     message: "If your project has a lot of features, list them here.",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "Enter contact email",
+  },
+  {
+    type: "input",
+    name: "username",
+    message: "Enter GitHub username",
   },
 ];
 
