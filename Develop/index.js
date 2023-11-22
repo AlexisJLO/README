@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
-const generateMarkdown = require("./generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 const fs = require("fs");
 // TODO: Create an array of questions for user input
 const questions = [
@@ -28,9 +28,31 @@ const questions = [
       "Provide instructions and examples for use. Include screenshots as needed.",
   },
   {
-    type: "choice",
+    type: "list",
     name: "License",
-    message: "placeholder",
+    message: "Which license do you want to use?",
+    choices: [
+      {
+        name: "MIT License",
+        value: "MIT",
+      },
+      {
+        name: "Apache License 2.0",
+        value: "Apache-2.0",
+      },
+      {
+        name: "GNU General Public License v3.0",
+        value: "GPL-3.0",
+      },
+      {
+        name: 'BSD 2-Clause "Simplified" License',
+        value: "BSD-2-Clause",
+      },
+      {
+        name: 'BSD 3-Clause "New" or "Revised" License',
+        value: "BSD-3-Clause",
+      },
+    ],
   },
   {
     type: "input",
